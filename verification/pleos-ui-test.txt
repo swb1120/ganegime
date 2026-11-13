@@ -1,0 +1,10 @@
+PASS recommendation order -> 2 waypoints + intermediate destination
+PASS duplicate request disabled while pending
+PASS unconfirmed route cannot advance
+PASS verified segment survives close and continues to final destination
+PASS no visible or callable next segment beyond destination
+PASS empty coordinates rejected
+PASS edited coordinates clear stale POI ID and route confirmation
+PASS infeasible plan blocks navigation dispatch
+PASS disconnected SDK blocks dispatch
+9 Pleos UI tests passed

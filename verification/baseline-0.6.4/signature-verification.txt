@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Ganegime App, O=Ganegime, C=KR
+Signer #1 certificate SHA-256 digest: 7c14a02c27d00edf0c335d4dd1f87a5ebd1cbd81b581b29c4b3116f845662c17
+Signer #1 certificate SHA-1 digest: 09a155d6c42c92dd41439aed5906fa194349d0b6
+Signer #1 certificate MD5 digest: 6e22ec63526f3b941bf35d2e22a8bba2
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: a2e67e79bc92adca036b38b8696c2f8ce7f065329bd40422135d50922f1e177c
+Signer #1 public key SHA-1 digest: cc0b15ae2b9c5c6229df337dd686339286f0c7a8
+Signer #1 public key MD5 digest: ebc910bd604b335ea320dba74843fec7

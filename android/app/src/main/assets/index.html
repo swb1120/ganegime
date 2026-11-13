@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f7f9"><meta name="description" content="귀가시간을 지키면서 퇴근길 볼일을 끝내는 일정 계산 프로토타입"><title>가는 김에, 비교 시연</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="demo-theme.css"></head>
+<body>
+<div id="app"></div><div id="toast" role="status" aria-live="polite"></div>
+<dialog id="task-dialog"><form id="task-form"><div class="dialog-head"><div><h2 id="dialog-title">볼일 추가</h2></div><button type="button" class="icon-button" data-action="close-dialog" aria-label="닫기">×</button></div><input type="hidden" name="id"><label>할 일<input name="title" maxlength="40" required placeholder="예: 약 찾기"></label><label>장소<select name="place"></select></label><div class="form-row"><label>예상 처리시간 (분)<input name="duration" type="number" min="1" max="180" required value="10"></label><label>완료 마감시간 (선택)<input name="close" type="time"></label></div><label class="check"><input name="required" type="checkbox" checked> 오늘 필수</label><label class="check"><input name="last" type="checkbox"> 마지막에 방문</label><p class="muted small">장소는 시연용 5곳 중 선택할 수 있어요. 실제 영업시간은 직접 확인해 주세요.</p><button class="button primary wide" type="submit">볼일 저장</button></form></dialog>
+<dialog id="confirm-dialog"><h2>예제로 돌아가기</h2><p id="confirm-message" class="muted small"></p><div class="button-row"><button class="button" data-action="confirm-cancel">취소</button><button class="button primary" data-action="confirm-accept">예제 불러오기</button></div></dialog>
+<script src="planner.js"></script><script src="showcase.js"></script><script src="showcase-ui.js"></script><script src="app.js"></script>
+<script src="pleos.js"></script></body></html>

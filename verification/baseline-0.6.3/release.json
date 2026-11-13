@@ -1,0 +1,13 @@
+{
+  "version": "0.6.3",
+  "package": "ai.ganegime.app.release",
+  "releaseSignature": "verified-v2",
+  "debuggable": false,
+  "releaseLiveIntegration": "PASS",
+  "reviewerGatewayIntegration": "PASS",
+  "locationDiagnosticPrivacy": "PASS",
+  "legacyLogMigration": "PASS",
+  "reviewAccessExpiresAt": "2026-12-05T14:59:59Z",
+  "sha256": "4244ebf7e7128cff8ba29d28de6fa6c7d8773486e8026db4dd7e1d2e149c391c",
+  "apkBytes": 6954851
+}

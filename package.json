@@ -1,0 +1,12 @@
+{
+  "name": "ganegime-submission",
+  "version": "0.6.5",
+  "private": true,
+  "scripts": {
+    "test": "node --test cloud/cloud.test.mjs review-gateway/gateway.test.mjs && node tests/live-ui-test.cjs && node tests/pleos-ui-test.cjs && node tests/showcase-ui-test.cjs && node --test tests/trip-ui-test.cjs",
+    "benchmark": "node evidence/benchmark.mjs evidence/results"
+  },
+  "devDependencies": {
+    "jsdom": "31.0.0"
+  }
+}

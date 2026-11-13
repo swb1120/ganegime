@@ -1,0 +1,23 @@
+✔ status identifies cloud and never returns a provider key (33.4239ms)
+✔ origin and malformed payloads rejected before provider calls (2.1923ms)
+✔ search uses validated user input (0.6635ms)
+✔ global fetch is not invoked with provider instance as receiver (1.128ms)
+✔ plan uses provider matrix and user coordinates; refresh propagates (4.3815ms)
+✔ upstream failure never falls back to fabricated travel (0.6855ms)
+✔ burst protection prevents excess provider calls (9.3176ms)
+✔ unknown exceptions are sanitized (0.402ms)
+✔ missing and wrong review codes do not call upstream (27.2314ms)
+✔ only three fixed POST routes are forwarded (1.9556ms)
+✔ expired code is denied before upstream (1.6868ms)
+✔ valid code is exchanged server-side and not leaked (3.4852ms)
+✔ oversized payload and browser origin are rejected (1.5323ms)
+✔ per-isolate plan burst limit is enforced (4.9779ms)
+✔ redirect and private-service errors are sanitized (1.3256ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 151.6422

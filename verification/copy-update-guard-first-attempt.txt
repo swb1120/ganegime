@@ -1,0 +1,55 @@
+INSTRUMENTATION_STATUS: class=ai.ganegime.app.DrivingGuardTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+ai.ganegime.app.DrivingGuardTest:
+INSTRUMENTATION_STATUS: test=realVehicleSignalsBlockTouchKeyboardAndBridgesAndPreserveDraft
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ai.ganegime.app.DrivingGuardTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=java.lang.NullPointerException: Attempt to invoke virtual method 'android.graphics.Bitmap android.window.ScreenCapture$ScreenshotHardwareBuffer.asBitmap()' on a null object reference
+	at android.app.UiAutomation.takeScreenshot(UiAutomation.java:1181)
+	at ai.ganegime.app.DrivingGuardTest.shot(DrivingGuardTest.java:61)
+	at ai.ganegime.app.DrivingGuardTest.realVehicleSignalsBlockTouchKeyboardAndBridgesAndPreserveDraft(DrivingGuardTest.java:89)
+
+INSTRUMENTATION_STATUS: stream=
+Error in realVehicleSignalsBlockTouchKeyboardAndBridgesAndPreserveDraft(ai.ganegime.app.DrivingGuardTest):
+java.lang.NullPointerException: Attempt to invoke virtual method 'android.graphics.Bitmap android.window.ScreenCapture$ScreenshotHardwareBuffer.asBitmap()' on a null object reference
+	at android.app.UiAutomation.takeScreenshot(UiAutomation.java:1181)
+	at ai.ganegime.app.DrivingGuardTest.shot(DrivingGuardTest.java:61)
+	at ai.ganegime.app.DrivingGuardTest.realVehicleSignalsBlockTouchKeyboardAndBridgesAndPreserveDraft(DrivingGuardTest.java:89)
+
+INSTRUMENTATION_STATUS: test=realVehicleSignalsBlockTouchKeyboardAndBridgesAndPreserveDraft
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=ai.ganegime.app.DrivingGuardTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unknownStaleReverseAndBriefStopsRemainLocked
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=ai.ganegime.app.DrivingGuardTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unknownStaleReverseAndBriefStopsRemainLocked
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 31.912
+There was 1 failure:
+1) realVehicleSignalsBlockTouchKeyboardAndBridgesAndPreserveDraft(ai.ganegime.app.DrivingGuardTest)
+java.lang.NullPointerException: Attempt to invoke virtual method 'android.graphics.Bitmap android.window.ScreenCapture$ScreenshotHardwareBuffer.asBitmap()' on a null object reference
+	at android.app.UiAutomation.takeScreenshot(UiAutomation.java:1181)
+	at ai.ganegime.app.DrivingGuardTest.shot(DrivingGuardTest.java:61)
+	at ai.ganegime.app.DrivingGuardTest.realVehicleSignalsBlockTouchKeyboardAndBridgesAndPreserveDraft(DrivingGuardTest.java:89)
+
+FAILURES!!!
+Tests run: 2,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

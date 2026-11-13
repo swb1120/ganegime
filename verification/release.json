@@ -1,0 +1,19 @@
+{
+  "version": "0.6.5",
+  "versionCode": 11,
+  "package": "ai.ganegime.app.release",
+  "checkedAt": "2026-11-13",
+  "debuggable": false,
+  "signature": "v2 verified",
+  "apkSha256": "dd0c742bc6f69039ee9f712556d9ef4963e89364feced9b2d1e62c2567004b3c",
+  "tripIntegrationTests": 1,
+  "drivingGuardTests": 2,
+  "privacyTests": 2,
+  "jsAndServerTests": 53,
+  "realVehicleValidation": false,
+  "sourceSha256": null,
+  "secretScan": "PASS",
+  "copyRevision": "editorial-2026-11-13",
+  "distribution": "github",
+  "materialsRevision": "official-submission-2026-11-13"
+}

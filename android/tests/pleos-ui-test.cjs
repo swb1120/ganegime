@@ -1,0 +1,18 @@
+const {JSDOM}=require('jsdom'),fs=require('node:fs'),assert=require('node:assert/strict');
+const root=require('node:path').resolve(__dirname,'../app/src/main/assets')+'/';
+const dom=new JSDOM(fs.readFileSync(root+'index.html','utf8'),{url:'https://app.ganegime.local',runScripts:'outside-only'}),w=dom.window,d=w.document;
+w.scrollTo=()=>{};w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false};
+const sent=[];w.PleosNative={getStatus:()=>JSON.stringify({ready:true,phase:'ready',pending:false,message:'connected'}),sendRoute:p=>sent.push(JSON.parse(p)),openNavigation:()=>{}};
+w.eval(['planner.js','showcase.js','showcase-ui.js','app.js','pleos.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'));
+const click=id=>d.getElementById(id).click();
+click('pleos-launch');click('pleos-send');
+assert.equal(sent.length,1);assert.equal(sent[0].points.length,3);assert.deepEqual(sent[0].points.map(p=>p.place),['laundry','parcel','market']);console.log('PASS recommendation order -> 2 waypoints + intermediate destination');
+click('pleos-send');assert.equal(sent.length,1);console.log('PASS duplicate request disabled while pending');
+w.onPleosStatus({ready:true,pending:false,phase:'timeout',message:'timeout'});assert.equal(d.getElementById('pleos-next').hidden,true);console.log('PASS unconfirmed route cannot advance');
+w.onPleosStatus({ready:true,pending:false,phase:'verified',message:'verified'});click('pleos-close');click('pleos-launch');assert.equal(d.getElementById('pleos-next').hidden,false);click('pleos-next');click('pleos-close');click('pleos-launch');click('pleos-send');assert.equal(sent.length,2);assert.deepEqual(sent[1].points.map(p=>p.place),['home']);console.log('PASS verified segment survives close and continues to final destination');
+w.onPleosStatus({ready:true,pending:false,phase:'verified',message:'verified'});assert.equal(d.getElementById('pleos-next').hidden,true);assert.equal(w.getComputedStyle(d.getElementById('pleos-next')).display,'none');const finalRoute=d.getElementById('pleos-route').textContent;click('pleos-next');assert.equal(d.getElementById('pleos-route').textContent,finalRoute);console.log('PASS no visible or callable next segment beyond destination');
+d.querySelector('[data-place="home"] [data-field="lat"]').value='';click('pleos-save-geo');assert.equal(w.localStorage.getItem('ganegime-geo-v2'),null);console.log('PASS empty coordinates rejected');
+d.querySelector('[data-place="home"] [data-field="lat"]').value='37.49';click('pleos-save-geo');assert.equal(JSON.parse(w.localStorage.getItem('ganegime-geo-v2')).home.poiId,'');assert.equal(d.getElementById('pleos-next').hidden,true);console.log('PASS edited coordinates clear stale POI ID and route confirmation');
+click('pleos-close');const deadline=d.getElementById('deadline-time');deadline.value='18:30';deadline.dispatchEvent(new w.Event('change',{bubbles:true}));click('pleos-launch');assert.equal(d.getElementById('pleos-send').disabled,true);console.log('PASS infeasible plan blocks navigation dispatch');
+w.onPleosStatus({ready:false,pending:false,phase:'unavailable',message:'offline'});assert.equal(d.getElementById('pleos-send').disabled,true);console.log('PASS disconnected SDK blocks dispatch');
+console.log('9 Pleos UI tests passed');w.close();

@@ -1,0 +1,9 @@
+PASS 비교 화면·해시 진입·동일 데이터
+PASS 내 일정 비교는 차이 없음을 정직하게 표시
+PASS 마감 변경·기준 일정 보존·내 일정 비변경
+PASS 실험 조건을 세 방식에 동일 적용
+PASS 처리시간 변경·전체 일정과 미루기 대안 구분
+PASS 예제 외 임의 입력값도 실제 계산
+PASS 필수 전환 후 대안 제거
+PASS 실험만 초기화
+8 showcase UI tests passed; no script errors

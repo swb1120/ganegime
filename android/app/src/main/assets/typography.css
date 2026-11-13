@@ -1,0 +1,10 @@
+/* Asta Sans, SIL Open Font License; bundled for offline rendering. */
+@font-face{font-family:'Asta Sans';src:url('AstaSans.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+:root{color-scheme:light;--bg:#f6f7f9;--ink:#17191d;--green:#25282d;--muted:#626771;--line:#e4e6ea;--lime:#edf0f4;--danger:#ae3d2e;--white:#fff;--shadow:none}
+body,button,input,select,textarea{font-family:'Asta Sans',sans-serif;letter-spacing:0;font-synthesis:none}
+button,input,select{min-height:48px}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #315fc7;outline-offset:3px}
+button:active:not(:disabled){filter:brightness(.94)}
+input[type=checkbox]{accent-color:#25282d}
+strong,b{font-weight:600}
+

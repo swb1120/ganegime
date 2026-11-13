@@ -1,0 +1,17 @@
+
+ai.ganegime.app.SubmissionVideoTest:.
+
+Time: 73.721
+
+OK (1 test)
+
+
+
+
+ai.ganegime.app.PrivacyRegressionTest:..
+
+Time: 10.921
+
+OK (2 tests)
+
+

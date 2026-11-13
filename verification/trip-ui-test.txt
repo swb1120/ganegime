@@ -1,0 +1,18 @@
+✔ departure recheck blocks a plan which becomes late before traffic expires (146.9003ms)
+✔ margins count down conservatively and clock rollback cannot restore slack (42.8337ms)
+✔ valid departure carries a bounded native expiry budget (41.9639ms)
+✔ choosing an alternative durably archives the full optional task and preserves it through completion (38.7365ms)
+✔ completion is persisted even when recalculation fails; retry does not complete twice (30.2598ms)
+✔ cancel and driving lock cannot record a completion (19.0559ms)
+✔ storage failure leaves completion and original origin untouched (18.9029ms)
+✔ restored tasks survive reload with their old deadlines; active task cap applies (97.1768ms)
+✔ last completion calculates only the final destination and records actual completion time (27.501ms)
+✔ edited inputs reject late calculation responses and required tasks cannot be deferred (24.2964ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1852.4031

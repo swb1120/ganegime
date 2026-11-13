@@ -1,0 +1,52 @@
+PASS missing places block calculation and dispatch
+PASS search-selected coordinates preserved; place text escaped
+PASS entered errands and actual selected places reach backend
+PASS real coordinates go to Pleos without foreign POI IDs
+PASS pending native request cannot be duplicated
+PASS per-errand completion exists even for a short itinerary
+PASS editing conditions invalidates old plan
+PASS late async calculation cannot overwrite edited inputs
+PASS expired traffic prevents dispatch
+PASS refresh bypass requested and infeasible plan blocked
+PASS one completion preserves unfinished errands and replans from its place
+11 live UI tests passed
+✔ live-ui-test.cjs (2314.1018ms)
+PASS recommendation order -> 2 waypoints + intermediate destination
+PASS duplicate request disabled while pending
+PASS unconfirmed route cannot advance
+PASS verified segment survives close and continues to final destination
+PASS no visible or callable next segment beyond destination
+PASS empty coordinates rejected
+PASS edited coordinates clear stale POI ID and route confirmation
+PASS infeasible plan blocks navigation dispatch
+PASS disconnected SDK blocks dispatch
+9 Pleos UI tests passed
+✔ pleos-ui-test.cjs (2258.9855ms)
+PASS 비교 화면·해시 진입·동일 데이터
+PASS 내 일정 비교는 차이 없음을 정직하게 표시
+PASS 마감 변경·기준 일정 보존·내 일정 비변경
+PASS 실험 조건을 세 방식에 동일 적용
+PASS 처리시간 변경·전체 일정과 미루기 대안 구분
+PASS 예제 외 임의 입력값도 실제 계산
+PASS 필수 전환 후 대안 제거
+PASS 실험만 초기화
+8 showcase UI tests passed; no script errors
+✔ showcase-ui-test.cjs (2327.7032ms)
+✔ departure recheck blocks a plan which becomes late before traffic expires (319.1771ms)
+✔ margins count down conservatively and clock rollback cannot restore slack (95.9903ms)
+✔ valid departure carries a bounded native expiry budget (58.8995ms)
+✔ choosing an alternative durably archives the full optional task and preserves it through completion (62.4243ms)
+✔ completion is persisted even when recalculation fails; retry does not complete twice (50.7516ms)
+✔ cancel and driving lock cannot record a completion (41.0175ms)
+✔ storage failure leaves completion and original origin untouched (42.8109ms)
+✔ restored tasks survive reload with their old deadlines; active task cap applies (82.5676ms)
+✔ last completion calculates only the final destination and records actual completion time (31.7763ms)
+✔ edited inputs reject late calculation responses and required tasks cannot be deferred (32.3442ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2648.2082

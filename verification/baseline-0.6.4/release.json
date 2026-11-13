@@ -1,0 +1,15 @@
+{
+  "version": "0.6.4",
+  "versionCode": 10,
+  "package": "ai.ganegime.app.release",
+  "checkedAt": "2026-11-13",
+  "debuggable": false,
+  "signature": "v2 verified",
+  "apkSha256": "539d59e914a6f5218b46d00703a90e22ecd99dcb072b4f3a24da0bb09324e124",
+  "guardTests": 2,
+  "privacyTests": 2,
+  "liveSearchPlanNavigationTests": 1,
+  "permissionDeniedHostCheck": "PASS",
+  "realVehicleValidation": false,
+  "publicDownloadVersion": "0.6.3"
+}

@@ -1,0 +1,107 @@
+{
+  "study": "Fixed synthetic three-errand scenario sensitivity analysis",
+  "release": "0.6.3",
+  "date": "2026-11-13",
+  "cases": 108,
+  "design": {
+    "startDelayMinutes": [
+      0,
+      5,
+      10,
+      20
+    ],
+    "parcelCloseMinutesAfter1800": [
+      25,
+      40,
+      60
+    ],
+    "marketDurationMinutes": [
+      20,
+      30,
+      40
+    ],
+    "homeDeadlineMinutesAfter1800": [
+      80,
+      95,
+      110
+    ],
+    "laundryDuration": 5,
+    "laundryCloseMinutesAfter1800": 60,
+    "parcelDuration": 10,
+    "inputOrder": [
+      "market",
+      "parcel",
+      "laundry"
+    ],
+    "lastPreference": "market",
+    "required": [
+      "laundry",
+      "market"
+    ],
+    "matrixMinutes": [
+      [
+        0,
+        10,
+        12,
+        8,
+        20
+      ],
+      [
+        10,
+        0,
+        10,
+        10,
+        15
+      ],
+      [
+        12,
+        10,
+        0,
+        10,
+        15
+      ],
+      [
+        8,
+        10,
+        10,
+        0,
+        10
+      ],
+      [
+        20,
+        15,
+        15,
+        10,
+        0
+      ]
+    ],
+    "matrixNodes": [
+      "origin",
+      "laundry",
+      "parcel",
+      "market",
+      "destination"
+    ],
+    "unplannedDwellMinutesPerStop": 5
+  },
+  "fastestFeasible": 34,
+  "recommendedFeasible": 44,
+  "rescuedFullTaskCases": 10,
+  "bothFeasible": 34,
+  "bothInfeasible": 64,
+  "infeasibleWithOptionalAlternative": 55,
+  "infeasibleWithoutAlternative": 9,
+  "recommendedFeasibleButFailsWithFiveExtraMinutesPerStop": 34,
+  "maxExtraDriveMin": 2,
+  "meanExtraDriveMin": 1,
+  "alternativesChecked": 99,
+  "plannerSha256": "e657212453e116e633fcc78504afff5b6e6380a52f6beb9e973096c8f7cd805a",
+  "limitations": [
+    "Synthetic inputs from one fixed travel-time matrix; not sampled users, roads, traffic, or commercial navigation products.",
+    "Full factorial set is a sensitivity check, not a population success-rate estimate.",
+    "Fastest minimizes driving time only; it is an internal baseline. Full-task completion requires all three errands.",
+    "Optional-task alternatives are reported separately and never counted as full-task successes.",
+    "Stress adds 5 minutes per stop to the already selected route without replanning; no reliability guarantee follows.",
+    "No claims about user demand, retention, time saved in the real world, or award probability."
+  ]
+}

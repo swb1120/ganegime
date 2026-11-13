@@ -1,0 +1,9 @@
+**/.env
+**/.env.local
+**/local.properties
+**/signing.properties
+**/*.jks
+**/local-cloud.json
+**/node_modules/
+**/.gradle/
+**/build/

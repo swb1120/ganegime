@@ -1,0 +1,9 @@
+{
+  "version": "0.6.3",
+  "releaseLiveIntegration": "PASS",
+  "privacyRegressionTests": 2,
+  "legacyLocationLogCleanup": "PASS",
+  "malformedPayloadDiagnostics": "PASS",
+  "liveRouteDiagnostics": "PASS",
+  "scope": "App-owned diagnostic storage; verified by instrumentation on release APK."
+}

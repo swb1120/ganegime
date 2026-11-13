@@ -1,0 +1,31 @@
+PASS missing places block calculation and dispatch
+PASS search-selected coordinates preserved; place text escaped
+PASS entered errands and actual selected places reach backend
+PASS real coordinates go to Pleos without foreign POI IDs
+PASS pending native request cannot be duplicated
+PASS per-errand completion exists even for a short itinerary
+PASS editing conditions invalidates old plan
+PASS late async calculation cannot overwrite edited inputs
+PASS expired traffic prevents dispatch
+PASS refresh bypass requested and infeasible plan blocked
+PASS one completion preserves unfinished errands and replans from its place
+11 live UI tests passed
+✔ live-ui-test.cjs (1638.7522ms)
+✔ departure recheck blocks a plan which becomes late before traffic expires (169.8769ms)
+✔ margins count down conservatively and clock rollback cannot restore slack (54.2003ms)
+✔ valid departure carries a bounded native expiry budget (49.3572ms)
+✔ choosing an alternative durably archives the full optional task and preserves it through completion (41.5036ms)
+✔ completion is persisted even when recalculation fails; retry does not complete twice (28.9454ms)
+✔ cancel and driving lock cannot record a completion (19.9123ms)
+✔ storage failure leaves completion and original origin untouched (21.4518ms)
+✔ restored tasks survive reload with their old deadlines; active task cap applies (67.3906ms)
+✔ last completion calculates only the final destination and records actual completion time (28.1009ms)
+✔ edited inputs reject late calculation responses and required tasks cannot be deferred (25.7254ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1873.667
