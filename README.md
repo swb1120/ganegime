@@ -130,7 +130,7 @@ node evidence/benchmark.mjs evidence/results
 
 ## 제출 자료 0.6.5
 
-소스와 APK는 이 GitHub 저장소로 제출합니다. 신청서, 기획서, 영상, 실행 안내와 접속 안내는 이메일에 첨부합니다. 제출 APK는 `apk/장선웅_가는김에_release.apk`입니다. 심사 기준 커밋 번호는 제출 이메일에 기재합니다. 이전 검증 기록은 baseline 폴더의 해당 버전 기록입니다. 최신 실행 안내는 `verification/review-guide.txt`입니다.
+소스와 APK는 이 GitHub 저장소로 제출합니다. 기획 내용을 작성하고 서명한 공식 참가신청서, 영상, 실행 안내와 접속 안내의 4개 파일을 이메일에 첨부합니다. 제출 APK는 `apk/장선웅_가는김에_release.apk`입니다. 심사 기준 커밋 번호는 제출 이메일에 기재합니다. 이전 검증 기록은 baseline 폴더의 해당 버전 기록입니다. 최신 실행 안내는 `verification/review-guide.txt`입니다.
 
 
 ## 0.6.5 문구 수정본
